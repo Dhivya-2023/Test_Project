@@ -11,7 +11,7 @@ export default function Footer() {
         <p className="text-[16px] text-gray-600">
           Marketed By{" "}
           <a
-            href="https://profitcast.in"
+            href="https://profitcast.com"
             target="_blank"
             rel="noreferrer"
             className="font-semibold text-red-600 underline underline-offset-2 hover:text-red-700"
