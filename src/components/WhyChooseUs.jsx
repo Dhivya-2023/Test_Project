@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 const ITEMS = [
-  { image: "/why/plumbing.jpg" },
-  { image: "/why/electricals.jpg" },
-  { image: "/why/tools.jpg" },
-  { image: "/why/fans.jpg" },
-  { image: "/why/digital.jpg" },
+  { image: "/why/plumbing.webp" },
+  { image: "/why/electricals.webp" },
+  { image: "/why/tools.webp" },
+  { image: "/why/fans.webp" },
+  { image: "/why/digital.webp" },
 ];
 
 export default function WhyChooseUs() {

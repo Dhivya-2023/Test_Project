@@ -1,161 +1,4 @@
-// // src/components/Industries.jsx
-// import { useState } from "react";
 
-// const INDUSTRIES = [
-//   {
-//     title: "Commercial Buildings",
-//     description:
-//       "Offices, retail spaces, and malls need efficient electrical and plumbing setups. We supply modular fittings, lighting solutions, DB boxes, and energy meters tailored for commercial loads.",
-//     image: "/industries/commercial.png",
-//   },
-//   {
-//     title: "Contractors & Builders",
-//     description:
-//       "Your go-to supply partner for large-scale construction projects—wires, pipes, switches, panels, and everything in between. Bulk deals and dependable delivery timelines.",
-//     image: "/industries/contractors.png",
-//   },
-//   {
-//     title: "Healthcare Facilities",
-//     description:
-//       "Hospitals and labs require reliable electrical performance and backup systems. We offer MCBs, control panels, and fittings compliant with high-precision environments.",
-//     image: "/industries/health.png",
-//   },
-//   {
-//     title: "Infrastructure Projects",
-//     description:
-//       "Offices, retail spaces, and malls need efficient electrical and plumbing setups. We supply modular fittings, lighting solutions, DB boxes, and energy meters tailored for commercial loads.",
-//     image: "/industries/infrastructure.png",
-//   },
-//    {
-//     title: "Contractors & Builders",
-//     description:
-//       "For metro, highway, and smart city works—find rugged cabling, outdoor floodlights, and panel boards designed to perform in open-site conditions.",
-//     image: "/industries/builders.png",
-//   },
-//   {
-//     title: "Co Working Space",
-//     description:
-//       "Shared workspaces require safe, efficient fittings. We provide lighting, switches, sockets, fans, and plumbing essentials tailored for co-working infrastructure.",
-//     image: "/industries/working.png",
-//   },
-//   {
-//     title: "Architect & Interiors",
-//     description:
-//       "We support designers with stylish lights, modular switches, concealed boxes, and ceiling fans — ideal for modern, functional and aesthetic interior setups.",
-//     image: "/industries/interior.png",
-//   },
-//     {
-//     title: "MEP Contractor",
-//     description:
-//       "We supply certified wires, switchgear, digital meters, pipes, and DB boxes — all trusted by MEP contractors for bulk supply and project readiness.",
-//     image: "/industries/mep.png",
-//   },
-//   {
-//     title: "Manufacturing Industries",
-//     description:
-//       "Factories and warehouses require high-load support. We offer industrial-grade fans, cables, isolators, and plumbing materials for demanding applications.",
-//     image: "/industries/manufacturing.png",
-//   },
-// ];
-
-// export default function Industries() {
-//   const [index, setIndex] = useState(0);
-
-//   // how many cards visible based on screen
-//   const visibleCount = 3; // layout uses responsive widths instead
-
-//   const maxIndex = INDUSTRIES.length - 1;
-
-//   const handlePrev = () => {
-//     setIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
-//   };
-
-//   const handleNext = () => {
-//     setIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
-//   };
-
-//   return (
-//     <section id="industries" className="bg-white py-12 sm:py-16 lg:py-20">
-//       <div className="mx-auto max-w-7xl px-4 md:px-6">
-//         {/* Heading row */}
-//         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-//           <div className="space-y-3">
-          
-//              <div className="mb-12 flex items-center gap-3">
-//           <span className="h-[4px] w-14 bg-red-600" />
-//           <h2 className="text-5xl font-extrabold text-black">
-//              Industries We Serve
-//           </h2>
-//         </div>
-//           </div>
-//           <p className="max-w-md text-md font-bold text-black md:text-right">
-//             Reliable supply for every sector&apos;s demands.
-//           </p>
-//         </div>
-
-//         {/* Carousel wrapper */}
-//         <div className="relative">
-//           {/* Slides container */}
-//           <div className="overflow-hidden  bg-transparent">
-//             <div
-//               className="flex transition-transform duration-500 ease-out"
-//               style={{ transform: `translateX(-${index * 100}%)` }}
-//             >
-//               {INDUSTRIES.map((item) => (
-//                 <article
-//                   key={item.title}
-//                   className="flex w-full flex-shrink-0 flex-col  
-//                              sm:w-full md:w-1/2 lg:w-1/3 md:mx-2 lg:mx-3 bg-gray-50 p-4"
-//                 >
-//                   <div className="relative h-52 overflow-hidden  sm:h-56 lg:h-60">
-//                     <img
-//                       src={item.image}
-//                       alt={item.title}
-//                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-//                     />
-//                   </div>
-//                   <div className="px-6 py-5 sm:px-7 sm:py-6">
-//                     <h3 className="mb-2 text-base font-semibold text-gray-900 sm:text-lg">
-//                       {item.title}
-//                     </h3>
-//                     <p className="text-xs leading-relaxed text-gray-500 sm:text-sm">
-//                       {item.description}
-//                     </p>
-//                   </div>
-//                 </article>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Left arrow */}
-//           <button
-//             onClick={handlePrev}
-//             className="absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-1/2
-//                        flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 bg-white
-//                        text-gray-700 shadow-sm transition hover:border-red-500 hover:text-red-600"
-//             aria-label="Previous industry"
-//           >
-//             ‹
-//           </button>
-
-//           {/* Right arrow */}
-//           <button
-//             onClick={handleNext}
-//             className="absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-1/2
-//                        flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 bg-white
-//                        text-gray-700 shadow-sm transition hover:border-red-500 hover:text-red-600"
-//             aria-label="Next industry"
-//           >
-//             ›
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-   
-
-// src/components/Industries.jsx
 
 
 import { useState } from "react";
@@ -166,55 +9,55 @@ const INDUSTRIES = [
     title: "Commercial Buildings",
     description:
       "Offices, retail spaces, and malls need efficient electrical and plumbing setups. We supply modular fittings, lighting solutions, DB boxes, and energy meters tailored for commercial loads.",
-    image: "/industries/commercial.png",
+    image: "/industries/commercial.webp",
   },
   {
     title: "Contractors & Builders",
     description:
       "Your go-to supply partner for large-scale construction projects—wires, pipes, switches, panels, and everything in between. Bulk deals and dependable delivery timelines.",
-    image: "/industries/contractors.png",
+    image: "/industries/contractors.webp",
   },
   {
     title: "Healthcare Facilities",
     description:
       "Hospitals and labs require reliable electrical performance and backup systems. We offer MCBs, control panels, and fittings compliant with high-precision environments.",
-    image: "/industries/health.png",
+    image: "/industries/health.webp",
   },
   {
     title: "Infrastructure Projects",
     description:
       "Offices, retail spaces, and malls need efficient electrical and plumbing setups. We supply modular fittings, lighting solutions, DB boxes, and energy meters tailored for commercial loads.",
-    image: "/industries/infrastructure.png",
+    image: "/industries/infrastructure.webp",
   },
    {
     title: "Contractors & Builders",
     description:
       "For metro, highway, and smart city works—find rugged cabling, outdoor floodlights, and panel boards designed to perform in open-site conditions.",
-    image: "/industries/builders.png",
+    image: "/industries/builders.webp",
   },
   {
     title: "Co Working Space",
     description:
       "Shared workspaces require safe, efficient fittings. We provide lighting, switches, sockets, fans, and plumbing essentials tailored for co-working infrastructure.",
-    image: "/industries/working.png",
+    image: "/industries/working.webp",
   },
   {
     title: "Architect & Interiors",
     description:
       "We support designers with stylish lights, modular switches, concealed boxes, and ceiling fans — ideal for modern, functional and aesthetic interior setups.",
-    image: "/industries/interior.png",
+    image: "/industries/interior.webp",
   },
     {
     title: "MEP Contractor",
     description:
       "We supply certified wires, switchgear, digital meters, pipes, and DB boxes — all trusted by MEP contractors for bulk supply and project readiness.",
-    image: "/industries/mep.png",
+    image: "/industries/mep.webp",
   },
   {
     title: "Manufacturing Industries",
     description:
       "Factories and warehouses require high-load support. We offer industrial-grade fans, cables, isolators, and plumbing materials for demanding applications.",
-    image: "/industries/manufacturing.png",
+    image: "/industries/manufacturing.webp",
   },
 ];
 
