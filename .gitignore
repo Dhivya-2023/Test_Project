@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Build output
+dist/
+build/
+out/
+*.log
+
+
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Coverage / test
+coverage/
+jest-html-reporters-*.html
+
+# Optional: local tooling caches
+.npm/
+.cache/
+.eslintcache
