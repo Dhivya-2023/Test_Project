@@ -7,6 +7,7 @@ import WhyChooseUs from "./components/WhyChooseUs.jsx"
 import Testimonials from "./components/Testimonials.jsx"
 import ContactFormSection from "./components/ContactFormSection.jsx"
 import Footer from "./components/Footer.jsx"
+import FloatingActions from "./components/FloatingActions.jsx";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
 <Testimonials/>
 <ContactFormSection/>
 <Footer/>
-        
+        <FloatingActions />
       </main>
     </div>
   );
